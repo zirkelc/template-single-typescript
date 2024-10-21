@@ -35,7 +35,7 @@ An empty Vitest config is provided in [`vitest.config.ts`](vitest.config.ts).
 
 ### Git Hooks
 
-[Husky](https://github.com/typicode/husky) runs the [pre-commit](.husky/pre-commit) hook to lint staged files.
+[Husky](https://github.com/typicode/husky) runs the [.husky/pre-commit](.husky/pre-commit) hook to lint staged files.
 
 ### Continuous Integration
 
