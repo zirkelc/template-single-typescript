@@ -2,6 +2,7 @@
   "name": "single-package-typescript",
   "version": "1.0.0",
   "description": "",
+  "packageManager": "pnpm@9.0.0",
   "module": "dist/index.js",
   "type": "module",
   "files": ["dist"],
