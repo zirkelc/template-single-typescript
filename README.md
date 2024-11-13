@@ -14,6 +14,7 @@ This template provides an opinionated setup for a single package TypeScript proj
 - 🐞 [VSCode](.vscode/) debug configuration and editor settings
 - 🔧 [@total-typescript/tsconfig](https://github.com/total-typescript/tsconfig) for TypeScript configuration
 - 🎯 [Are The Types Wrong?](https://github.com/arethetypeswrong/arethetypeswrong.github.io) for type validation
+- 🚀 [pkg.pr.new](https://github.com/stackblitz-labs/pkg.pr.new) for preview releases
 
 ## 📋 Details
 
@@ -41,6 +42,10 @@ An empty Vitest config is provided in [`vitest.config.ts`](vitest.config.ts).
 ### Continuous Integration
 
 [`.github/workflows/ci.yml`](.github/workflows/ci.yml) defines a GitHub Actions workflow to run linting and tests on commits and pull requests.
+
+### Preview Releases
+
+[pkg.pr.new](https://github.com/stackblitz-labs/pkg.pr.new) will automatically generate preview releases for every push and pull request. This allows you to test changes before publishing to npm.
 
 ### VSCode Integration
 
