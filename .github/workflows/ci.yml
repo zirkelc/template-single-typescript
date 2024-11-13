@@ -45,6 +45,7 @@ jobs:
       - name: Test
         run: pnpm test
 
+  # Install app: https://github.com/apps/pkg-pr-new
   preview:
     name: Preview
     runs-on: ubuntu-latest
@@ -53,7 +54,6 @@ jobs:
 
       - name: Check for pkg-pr-new app
         id: check-app
-        continue-on-error: true
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -62,7 +62,7 @@ jobs:
           else
             echo "app_installed=false" >> $GITHUB_OUTPUT
             echo "::notice::Skipping preview job - pkg-pr-new app is not installed"
-            exit 78  # Exit code 78 will mark the job as skipped
+            exit 1
           fi
 
       - name: Setup and Install
