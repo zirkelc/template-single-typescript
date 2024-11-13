@@ -13,6 +13,7 @@ This template provides an opinionated setup for a single package TypeScript proj
 - 🔄 [GitHub Actions](.github/workflows/ci.yml) for continuous integration
 - 🐞 [VSCode](.vscode/) debug configuration and editor settings
 - 🔧 [@total-typescript/tsconfig](https://github.com/total-typescript/tsconfig) for TypeScript configuration
+- 🎯 [Are The Types Wrong?](https://github.com/arethetypeswrong/arethetypeswrong.github.io) for type validation
 
 ## 📋 Details
 
@@ -66,6 +67,10 @@ It uses the [JavaScript Debug Terminal](https://code.visualstudio.com/docs/nodej
 - Inserts a final newline in files
 
 This configuration complements Biome and helps maintain a consistent code style throughout the project.
+
+### Type Validation
+
+The project includes the `@arethetypeswrong/cli` CLI tool to validate TypeScript types in your package. Run `pnpm typecheck` after building to ensure your package's types are correct and compatible with both ESM and CommonJS environments.
 
 ## 🚀 Getting Started
 

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "packageManager": "pnpm@9.0.0",
+  "main": "dist/index.cjs",
   "module": "dist/index.js",
   "type": "module",
   "files": ["dist"],
@@ -13,11 +14,13 @@
     }
   },
   "scripts": {
+    "prepublishOnly": "pnpm build && pnpm typecheck",
     "build": "tsup src/index.ts --format esm,cjs --dts --clean",
     "test": "vitest",
     "lint:check": "biome check .",
     "lint:fix": "biome check . --write",
-    "prepare": "husky"
+    "prepare": "husky",
+    "typecheck": "attw --pack ."
   },
   "keywords": [],
   "author": "",
@@ -26,6 +29,7 @@
     "@biomejs/biome": "^1.9.4",
     "@total-typescript/tsconfig": "^1.0.4",
     "@types/node": "^22.7.7",
+    "@arethetypeswrong/cli": "^0.17.0",
     "husky": "^9.1.6",
     "tsup": "^8.3.0",
     "typescript": "^5.6.3",
