@@ -50,7 +50,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - run: corepack enable
+      - name: Check for pkg-pr-new app
+        id: check-app
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh api /installation/repositories | grep -q "pkg-pr-new"; then
+            echo "app_installed=true" >> $GITHUB_OUTPUT
+          else
+            echo "app_installed=false" >> $GITHUB_OUTPUT
+            echo "::notice::Skipping preview job - pkg-pr-new app is not installed"
+            exit 78  # Exit code 78 will mark the job as skipped
+          fi
 
       - name: Setup and Install
         id: install

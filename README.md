@@ -47,6 +47,8 @@ An empty Vitest config is provided in [`vitest.config.ts`](vitest.config.ts).
 
 [pkg.pr.new](https://github.com/stackblitz-labs/pkg.pr.new) will automatically generate preview releases for every push and pull request. This allows you to test changes before publishing to npm.
 
+Must install GitHub App: [pkg.pr.new](https://github.com/apps/pkg-pr-new)
+
 ### VSCode Integration
 
 #### Debugging
