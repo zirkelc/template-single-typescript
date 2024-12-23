@@ -90,6 +90,9 @@ The project includes the `@arethetypeswrong/cli` CLI tool to validate TypeScript
 
 ## Optional
 
+### Publish to NPM
+[JS-DevTools/npm-publish](https://github.com/JS-DevTools/npm-publish) is a GitHub Action to publish packages to npm automatically by updating the version number.
+
 ### Preview Releases
 
 [pkg.pr.new](https://github.com/stackblitz-labs/pkg.pr.new) will automatically generate preview releases for every push and pull request. This allows you to test changes before publishing to npm.
