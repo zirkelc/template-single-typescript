@@ -14,7 +14,16 @@ This template provides an opinionated setup for a single package TypeScript proj
 - 🐞 [VSCode](.vscode/) debug configuration and editor settings
 - 🔧 [@total-typescript/tsconfig](https://github.com/total-typescript/tsconfig) for TypeScript configuration
 - 🎯 [Are The Types Wrong?](https://github.com/arethetypeswrong/arethetypeswrong.github.io) for type validation
-- 🚀 [pkg.pr.new](https://github.com/stackblitz-labs/pkg.pr.new) for preview releases
+
+## 🚀 Getting Started
+
+1. Create a new repository [using this template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)
+2. Run `pnpm install` to install dependencies
+3. Start coding in the `src` directory
+4. Run tests with `pnpm test`
+5. Build your project with `pnpm build`
+
+Happy coding! 🎉
 
 ## 📋 Details
 
@@ -79,12 +88,10 @@ This configuration complements Biome and helps maintain a consistent code style 
 
 The project includes the `@arethetypeswrong/cli` CLI tool to validate TypeScript types in your package. Run `pnpm typecheck` after building to ensure your package's types are correct and compatible with both ESM and CommonJS environments.
 
-## 🚀 Getting Started
+## Optional
 
-1. Create a new repository [using this template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)
-2. Run `pnpm install` to install dependencies
-3. Start coding in the `src` directory
-4. Run tests with `pnpm test`
-5. Build your project with `pnpm build`
+### Preview Releases
 
-Happy coding! 🎉
+[pkg.pr.new](https://github.com/stackblitz-labs/pkg.pr.new) will automatically generate preview releases for every push and pull request. This allows you to test changes before publishing to npm.
+
+Must install GitHub App: [pkg.pr.new](https://github.com/apps/pkg-pr-new)
