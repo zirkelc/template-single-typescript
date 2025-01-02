@@ -1,7 +1,7 @@
 {
-  "name": "PACKAGE",
+  "name": "<PACKAGE>",
   "version": "1.0.0",
-  "description": "DESCRIPTION",
+  "description": "<DESCRIPTION>",
   "packageManager": "pnpm@9.0.0",
   "main": "dist/index.cjs",
   "module": "dist/index.js",
@@ -22,11 +22,11 @@
     "typecheck": "attw --pack ."
   },
   "keywords": [],
-  "author": "AUTHOR",
-  "license": "LICENSE",
+  "author": "<AUTHOR>",
+  "license": "<LICENSE>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/USERNAME/REPO"
+    "url": "https://github.com/<USERNAME>/<REPO>"
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.17.0",

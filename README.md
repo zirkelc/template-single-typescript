@@ -27,24 +27,31 @@ Replace all occurences of the following placeholders with the correct values:
 
 | Placeholder | File | Description |
 | --- | --- | --- |
-| `PACKAGE` | `package.json` | Your package name |
-| `DESCRIPTION` | `package.json` | Your package description |
-| `USERNAME` | `package.json` | Your GitHub username |
-| `REPO` | `package.json` | Your repository name |
-| `AUTHOR` | `package.json` | Your name |
-| `LICENSE` | `package.json` | Your license |
+| `<PACKAGE>` | `package.json` | Your package name |
+| `<DESCRIPTION>` | `package.json` | Your package description |
+| `<USERNAME>` | `package.json` | Your GitHub username |
+| `<REPO>` | `package.json` | Your repository name |
+| `<AUTHOR>` | `package.json` | Your name |
+| `<LICENSE>` | `package.json` | Your license |
 
-### 3. Install dependencies
+### 3. Apply ToDos
 
-Run `pnpm install` to install dependencies
+Find all occurrences of `TODO` and apply them:
 
-### 4. Test
+| TODO | File | Description |
+| --- | --- | --- |
+| `TODO: PREVIEW` | `.github/workflows/ci.yml` | Create [preview releases](#preview-releases) |
+| `TODO: PUBLISH` | `.github/workflows/ci.yml` | [Publish to NPM](#publish-npm) |
 
-Run `pnpm test` to run tests
+### 4. Install, Build, Test
 
-### 5. Build
+Verify your project is working by running `install`, `build`, and `test`:
 
-Run `pnpm build` to build your project
+```sh
+pnpm install
+pnpm build
+pnpm test
+```
 
 Happy coding! 🎉
 
@@ -74,12 +81,6 @@ An empty Vitest config is provided in [`vitest.config.ts`](vitest.config.ts).
 ### Continuous Integration
 
 [`.github/workflows/ci.yml`](.github/workflows/ci.yml) defines a GitHub Actions workflow to run linting and tests on commits and pull requests.
-
-### Preview Releases
-
-[pkg.pr.new](https://github.com/stackblitz-labs/pkg.pr.new) will automatically generate preview releases for every push and pull request. This allows you to test changes before publishing to npm.
-
-Must install GitHub App: [pkg.pr.new](https://github.com/apps/pkg-pr-new)
 
 ### VSCode Integration
 
@@ -113,11 +114,15 @@ The project includes the `@arethetypeswrong/cli` CLI tool to validate TypeScript
 
 ## Optional
 
-### Publish to NPM
+### <a name="publish-npm"></a> Publish to NPM
 [JS-DevTools/npm-publish](https://github.com/JS-DevTools/npm-publish) is a GitHub Action to publish packages to npm automatically by updating the version number.
 
-### Preview Releases
+To enable this, apply the `TODO: PUBLISH`.
+
+### <a name="preview-releases"></a> Preview Releases
 
 [pkg.pr.new](https://github.com/stackblitz-labs/pkg.pr.new) will automatically generate preview releases for every push and pull request. This allows you to test changes before publishing to npm.
 
 Must install GitHub App: [pkg.pr.new](https://github.com/apps/pkg-pr-new)
+
+To enable this, apply the `TODO: PREVIEW`.
