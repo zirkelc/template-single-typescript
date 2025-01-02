@@ -17,11 +17,34 @@ This template provides an opinionated setup for a single package TypeScript proj
 
 ## 🚀 Getting Started
 
-1. Create a new repository [using this template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)
-2. Run `pnpm install` to install dependencies
-3. Start coding in the `src` directory
-4. Run tests with `pnpm test`
-5. Build your project with `pnpm build`
+### 1. Create a new repository
+
+Create a new repository [using this template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)
+
+### 2. Replace placeholders
+
+Replace all occurences of the following placeholders with the correct values:
+
+| Placeholder | File | Description |
+| --- | --- | --- |
+| `PACKAGE` | `package.json` | Your package name |
+| `DESCRIPTION` | `package.json` | Your package description |
+| `USERNAME` | `package.json` | Your GitHub username |
+| `REPO` | `package.json` | Your repository name |
+| `AUTHOR` | `package.json` | Your name |
+| `LICENSE` | `package.json` | Your license |
+
+### 3. Install dependencies
+
+Run `pnpm install` to install dependencies
+
+### 4. Test
+
+Run `pnpm test` to run tests
+
+### 5. Build
+
+Run `pnpm build` to build your project
 
 Happy coding! 🎉
 
