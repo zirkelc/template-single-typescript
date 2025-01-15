@@ -7,7 +7,7 @@ This template provides an opinionated setup for a single package TypeScript proj
 - 📦 [PNPM](https://pnpm.io/) for efficient package management
 - 🧹 [Biome](https://biomejs.dev/) for linting and formatting
 - 🧪 [Vitest](https://vitest.dev/) for fast, modern testing
-- 🏗️ [tsup](https://tsup.egoist.dev/) for TypeScript building and bundling
+- 🏗️ [unbuild](https://github.com/unjs/unbuild) for TypeScript building and bundling
 - 🏃‍♂️ [tsx](https://tsx.is/) for running TypeScript files
 - 🐶 [Husky](https://github.com/typicode/husky) for Git hooks
 - 🔄 [GitHub Actions](.github/workflows/ci.yml) for continuous integration
@@ -71,7 +71,7 @@ An empty Vitest config is provided in [`vitest.config.ts`](vitest.config.ts).
 
 ### Build and Run
 
-- `tsup` builds `./src/index.ts`, outputting both ESM and CJS formats to the `dist` folder.
+- `unbuild` builds `./src/index.ts`, outputting both ESM and CJS formats to the `dist` folder.
 - `tsx` compiles and runs TypeScript files on-the-fly.
 
 ### Git Hooks

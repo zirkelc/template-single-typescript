@@ -4,18 +4,19 @@
   "description": "<DESCRIPTION>",
   "packageManager": "pnpm@9.0.0",
   "main": "dist/index.cjs",
-  "module": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "type": "module",
   "files": ["dist"],
   "exports": {
     ".": {
-      "import": "./dist/index.js",
+      "import": "./dist/index.mjs",
       "require": "./dist/index.cjs"
     }
   },
   "scripts": {
     "prepublishOnly": "pnpm build && pnpm typecheck",
-    "build": "tsup src/index.ts --format esm,cjs --dts --clean",
+    "build": "unbuild",
     "test": "vitest",
     "lint": "biome check . --write",
     "prepare": "husky",
@@ -35,8 +36,8 @@
     "@types/node": "^22.7.7",
     "husky": "^9.1.6",
     "pkg-pr-new": "^0.0.30",
-    "tsup": "^8.3.0",
-    "typescript": "^5.6.3",
+    "typescript": "^5.7.3",
+    "unbuild": "^3.3.1",
     "vitest": "^2.1.3"
   }
 }
