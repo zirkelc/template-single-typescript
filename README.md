@@ -4,16 +4,18 @@ This template provides an opinionated setup for a single package TypeScript proj
 
 ## 🚀 Features
 
-- 📦 [PNPM](https://pnpm.io/) for efficient package management
-- 🧹 [Biome](https://biomejs.dev/) for linting and formatting
-- 🧪 [Vitest](https://vitest.dev/) for fast, modern testing
-- 🏗️ [unbuild](https://github.com/unjs/unbuild) for TypeScript building and bundling
-- 🏃‍♂️ [tsx](https://tsx.is/) for running TypeScript files
-- 🐶 [Husky](https://github.com/typicode/husky) for Git hooks
-- 🔄 [GitHub Actions](.github/workflows/ci.yml) for continuous integration
-- 🐞 [VSCode](.vscode/) debug configuration and editor settings
-- 🔧 [@total-typescript/tsconfig](https://github.com/total-typescript/tsconfig) for TypeScript configuration
-- 🎯 [Are The Types Wrong?](https://github.com/arethetypeswrong/arethetypeswrong.github.io) for type validation
+- [PNPM](https://pnpm.io/) for efficient package management
+- [Biome](https://biomejs.dev/) for linting and formatting
+- [Vitest](https://vitest.dev/) for fast, modern testing
+- [tsdown](https://github.com/rolldown/tsdown) for TypeScript building and bundling
+- [tsx](https://tsx.is/) for running TypeScript files
+- [Husky](https://github.com/typicode/husky) for Git hooks
+- [GitHub Actions](.github/workflows/ci.yml) for continuous integration
+- [VSCode](.vscode/) debug configuration and editor settings
+- [@total-typescript/tsconfig](https://github.com/total-typescript/tsconfig) for TypeScript configuration
+- [Are The Types Wrong?](https://github.com/arethetypeswrong/arethetypeswrong.github.io) for type validation
+- [publint](https://github.com/publint/publint) for package.json validation
+- [EditorConfig](https://editorconfig.org/) for consistent coding styles
 
 ## 🚀 Getting Started
 
@@ -71,7 +73,7 @@ An empty Vitest config is provided in [`vitest.config.ts`](vitest.config.ts).
 
 ### Build and Run
 
-- `unbuild` builds `./src/index.ts`, outputting both ESM and CJS formats to the `dist` folder.
+- `tsdown` builds `./src/index.ts`, outputting an ES module to the `dist` folder.
 - `tsx` compiles and runs TypeScript files on-the-fly.
 
 ### Git Hooks
@@ -108,9 +110,13 @@ It uses the [JavaScript Debug Terminal](https://code.visualstudio.com/docs/nodej
 
 This configuration complements Biome and helps maintain a consistent code style throughout the project.
 
-### Type Validation
+### Types Validation
 
-The project includes the `@arethetypeswrong/cli` CLI tool to validate TypeScript types in your package. Run `pnpm typecheck` after building to ensure your package's types are correct and compatible with both ESM and CommonJS environments.
+The project includes the `@arethetypeswrong/cli` CLI tool to validate TypeScript types in your package. It is integrated into `tsdown` and will run automatically during the build
+
+### Publint
+
+The project includes `publint` to validate your `package.json` file. It is integrated into `tsdown` and will run automatically during the build.
 
 ## Optional
 
